@@ -1,10 +1,11 @@
+import Layout from "./components/Layout";
+import Home from "./components/pages/Home";
 import "./styles/App.css";
-
 function App() {
   return (
-    <div className="App">
-      <h1>Hello world</h1>
-    </div>
+    <Layout>
+      <Home />
+    </Layout>
   );
 }
 
