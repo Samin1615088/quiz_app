@@ -1,20 +1,25 @@
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
+import Home from "./components/pages/Home";
+import Login from "./components/pages/Login";
+import Quiz from "./components/pages/Quiz";
 import Result from "./components/pages/Result";
-// import Quiz from "./components/pages/Quiz";
-// import Home from "./components/pages/Home";
-// import Signup from "./components/pages/Signup";
-// import Login from "./components/pages/Login";
+import Signup from "./components/pages/Signup";
 import "./styles/App.css";
 
 function App() {
   return (
-    <Layout>
-      {/* <Home /> */}
-      {/* <Signup /> */}
-      {/* <Login /> */}
-      {/* <Quiz /> */}
-      <Result />
-    </Layout>
+    <Router>
+      <Layout>
+        <Routes >
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/signup" element={<Signup />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/quiz" element={<Quiz />} />
+          <Route exact path="/result" element={<Result />} />
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
 
